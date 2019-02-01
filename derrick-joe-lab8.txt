@@ -1,0 +1,69 @@
+3)
+insert into customer index 0.021s
+insert into customer noindex 0.012s
+insert into supplier index 0.0007s
+insert into supplier noindex 0.005s
+insert into lineitem index 0.443s
+insert into lineitem noindex 0.086s
+insert into orders index 0.089s
+insert into orders noindex 0.026s
+in general it seems that the index takes longer to complete
+4)
+create customer mktsegment index 0.009s
+create lintiem returnflag index 0.108s
+create orders priority index 0.034s
+created indexs fairly quickly
+5)
+1 with index 0.001s
+1 with noindex 0.001s
+no difference
+2 with index 0.002s
+2 with noindex 0.001s
+index took longer but small difference
+3 with index 0.003s
+3 with noindex 0.003s
+no difference
+4 with index 0.087s
+4 with noindex 0.085s
+index took longer but small difference
+5 with index 0.003s
+5 with noindex 0.002s
+index took longer
+6 with index 0.007s
+6 with nonindex 0.004s
+index took longer
+7 with index 0.193s
+7 with noindex 0.204s
+index was faster b/c searching for c_name
+8 with index 0.002s
+8 with noindex 0.002s
+no difference
+9 with index 0.002s
+9 with noindex 0.002s
+no difference
+10 with index 0.019s
+10 with noindex 0.053s
+index was faster because searching for o_orderdate
+11 with index 0.288s
+11 with noindex 0.201s
+index took longer
+12 with index 0.060s
+12 with noindex 0.036s
+index  took longer
+13 with index 0.003s
+13 with noindex 0.002s
+index took longer but not signifigant
+14 with index 0.016s
+14 with noindex 0.019s
+index was faster b/c o_orderdate is an index
+15 with index 0.282s
+15 with noindex 0.227s
+index took longer
+6)
+update on lineitem index 0.769s
+update on lintiem noindex 0.404s
+index seemed to take longer
+7)
+update on supplier index 0.008s
+update on supplier noindex 0.005s
+index seemed to take longer
